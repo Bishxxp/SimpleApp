@@ -18,8 +18,8 @@ class Home extends StatelessWidget {
               onPressed: () {
                 print("Text Button Pressed");
               },
-              child: const Text(
-                "Home",
+              child: Text(
+                "Text",
                 style: TextStyle(
                   color: Colors.deepPurple,
                   fontSize: 20,
@@ -28,50 +28,37 @@ class Home extends StatelessWidget {
             ),
             FilledButton(
               style: FilledButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 193, 43, 43),
-                foregroundColor: Color.fromARGB(255, 236, 163, 16),
-              ),
+                  backgroundColor: Colors.amber.shade100,
+                  foregroundColor: Colors.brown),
               onPressed: () {
-                print("Filled Button Pressed");
+                print("FilledButton Pressed");
               },
-              child: const Text(
-                "Filled",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+              child: Text("Filled",
+                  style: TextStyle(
+                    fontSize: 20,
+                  )),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 131, 2, 153),
-                foregroundColor: Color.fromARGB(255, 241, 91, 244),
-              ),
+                  backgroundColor: Colors.green,
+                  foregroundColor: Colors.white,
+                  shadowColor: Colors.red,
+                  elevation: 5),
               onPressed: () {
-                print("Elevated Button Pressed");
-              },
-              child: const Text("Elevated",
-                style: TextStyle(
-                    fontSize: 20,
-                ),
-              ),
-            ),
+                print("ElevatedButton Pressed");
+              }, 
+              child: Text("Elevated")),
             OutlinedButton(
+              
               style: OutlinedButton.styleFrom(
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  width: 2
-                  ),
-                foregroundColor: Color.fromARGB(255, 21, 0, 255), 
+                  side: BorderSide(
+                    color: Colors.red, 
+                    width: 3),
               ),
               onPressed: () {
-                print("Outlined Button Pressed");
-              },
-              child: const Text("Outline",
-                style: TextStyle(
-                      fontSize: 20,
-                  ),
-                ),
-            ),
+                print("OutlinedButton Pressed");
+              }, 
+              child: Text("Outlined")),
           ],
         ),
       ),

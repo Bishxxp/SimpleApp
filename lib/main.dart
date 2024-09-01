@@ -1,50 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:simpleapp/screens/menus.dart';
-import 'package:simpleapp/screens/home.dart'; 
+import 'package:simpleapp/screens/latestRate.dart';
+import 'package:simpleapp/screens/convert.dart';
+
 void main() {
-  runApp(
-    const MaterialApp(
-      title: "Simple App",
-      home: MyHomePage(),
-    ),
-  );
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  runApp(MaterialApp(
+    title: "Exchange Currency",
+    home: Scaffold(
       appBar: AppBar(
-        title: const Text("Simple App"),
+        title: const Text("Exchange Currency"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            OutlinedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Menus()),
-                );
-              },
-              child: const Text('Menu'),
-            ),
-            const SizedBox(height: 20),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Home()), 
-                );
-              },
-              child: const Text('Homie'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+      body: const LatestRate(),
+    ),
+  ));
 }
